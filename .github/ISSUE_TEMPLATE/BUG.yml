@@ -12,7 +12,5 @@ body:
     attributes:
       label: "Describe the bug"
       description: "A clear and concise description of what the bug is."
-      placeholder: ""
-      value: ""
     validations:
       required: true
