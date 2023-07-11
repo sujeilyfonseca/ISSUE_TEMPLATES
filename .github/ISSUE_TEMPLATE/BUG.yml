@@ -1,62 +1,96 @@
-name: Bug Report
-description: File a bug report
+name: "\U0001F41B Bug report"
+about: "Complete the following issue to report a bug."
 title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+labels: ["Bug", "Triage"]
+assignees: ""
 body:
-  - type: markdown
+- type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        Thank you for taking the time to fill out this bug report!
+- type: textarea
+    id: description
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: "Describe the bug:"
+      description: "A clear and concise description of what the bug is."
+      placeholder: ""
+      value: ""
     validations:
       required: true
-  - type: dropdown
-    id: version
+- type: textarea
+    id: steps
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: "Steps to reproduce the behavior:"
+      description: "."
+      placeholder: ""
+      value: "1. Go to ..., 2. Click on ..., 3. Scroll down to ..., 4. See error ..."
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+- type: textarea
+    id: expected_behavior
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
+      label: "Expected behavior:"
+      description: "A clear and concise description of what you expected to happen."
+      placeholder: ""
+      value: ""
+- type: textarea
+    id: possible_solution
+    attributes:
+      label: "Possible solution:"
+      description: "Not obligatory, but suggest a fix/reason for the bug."
+      placeholder: ""
+      value: ""
+- type: input
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: "Relevant logs:"
+      description: "If applicable, add logs to help identify the root cause of your problem."
+      placeholder: ""
+      value: ""
+- type: input
+    id: screenshots
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: "Relevant logs:"
+      description: "If applicable, add screenshots to help explain your problem."
+      placeholder: ""
+      value: ""
+- type: dropdown
+    id: Severity
+    attributes:
+      label: Please add the label corresponding to the severity as follow:
+      description: We provide labels to indicate the severity of issues so that the support team can triage/prioritize accordingly.
       options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+        - `Sev1`: This defect indicates a complete shutdown of the service or component; nothing can proceed.
+        - `Sev2`: It is a highly severe defect service, or the component has a severe functional impact. However, certain parts of the system remain operational.
+        - `Sev3`: It causes some undesirable behavior, but the system is still functional.
+        - `Sev4`: It won’t cause any major system breakdown.
+    validations:
+      required: true
+- type: input
+    id: environment
+    attributes:
+      label: "Context: Environment"
+      description: "Describe the environment where the issue occurs."
+      placeholder: ""
+      value: ""
+- type: input
+    id: browser
+    attributes:
+      label: "Context: Browser"
+      description: "Specify the browser and version, if applicable."
+      placeholder: ""
+      value: ""
+- type: input
+    id: os
+    attributes:
+      label: "Context: Operating system"
+      description: "Specify the operating system and version, if applicable."
+      placeholder: ""
+      value: ""
+- type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context:"
+      description: " Add any other context about the problem here."
+      placeholder: ""
+      value: ""
