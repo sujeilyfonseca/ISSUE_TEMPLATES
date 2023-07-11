@@ -40,5 +40,5 @@ body:
   - type: input
     id: screenshots
     attributes:
-      label: "Relevant logs:"
+      label: "Relevant screenshots:"
       description: "If applicable, add screenshots to help explain your problem."
