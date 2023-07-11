@@ -42,3 +42,24 @@ body:
     attributes:
       label: "Relevant screenshots:"
       description: "If applicable, add screenshots to help explain your problem."
+  - type: input
+    id: environment
+    attributes:
+      label: "Context: Environment"
+      description: "Describe the environment where the issue occurs."
+  - type: input
+    id: browser
+    attributes:
+      label: "Context: Browser"
+      description: "Specify the browser and version, if applicable."
+  - type: input
+    id: os
+    attributes:
+      label: "Context: Operating system"
+      description: "Specify the operating system and version, if applicable."
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context:"
+      description: "Add any other context about the problem here."
+
