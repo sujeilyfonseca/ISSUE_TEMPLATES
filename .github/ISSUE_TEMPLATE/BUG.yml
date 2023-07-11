@@ -14,3 +14,72 @@ body:
       description: "A clear and concise description of what the bug is."
     validations:
       required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce the behavior:"
+      description: "."
+      placeholder: ""
+      value: "1. Go to ..., 2. Click on ..., 3. Scroll down to ..., 4. See error ..."
+    validations:
+      required: true
+- type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected behavior:"
+      description: "A clear and concise description of what you expected to happen."
+      placeholder: ""
+      value: ""
+- type: textarea
+    id: possible_solution
+    attributes:
+      label: "Possible solution:"
+      description: "Not obligatory, but suggest a fix/reason for the bug."
+      placeholder: ""
+      value: ""
+- type: input
+    id: logs
+    attributes:
+      label: "Relevant logs:"
+      description: "If applicable, add logs to help identify the root cause of your problem."
+      placeholder: ""
+      value: ""
+- type: input
+    id: screenshots
+    attributes:
+      label: "Relevant logs:"
+      description: "If applicable, add screenshots to help explain your problem."
+      placeholder: ""
+      value: ""
+- type: dropdown
+    id: Severity
+    attributes:
+      label: Please add the label corresponding to the severity as follow:
+      description: We provide labels to indicate the severity of issues so that the support team can triage/prioritize accordingly.
+      options:
+        - `Sev1`: This defect indicates a complete shutdown of the service or component; nothing can proceed.
+        - `Sev2`: It is a highly severe defect service, or the component has a severe functional impact. However, certain parts of the system remain operational.
+        - `Sev3`: It causes some undesirable behavior, but the system is still functional.
+        - `Sev4`: It won’t cause any major system breakdown.
+    validations:
+      required: true
+- type: input
+    id: environment
+    attributes:
+      label: "Context: Environment"
+      description: "Describe the environment where the issue occurs."
+- type: input
+    id: browser
+    attributes:
+      label: "Context: Browser"
+      description: "Specify the browser and version, if applicable."
+- type: input
+    id: os
+    attributes:
+      label: "Context: Operating system"
+      description: "Specify the operating system and version, if applicable."
+- type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context:"
+      description: " Add any other context about the problem here."
