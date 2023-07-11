@@ -14,6 +14,18 @@ body:
       description: "A clear and concise description of what the bug is."
     validations:
       required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Please add the label corresponding to the severity as follow:"
+      description: "We provide labels to indicate the severity of issues so that the support team can triage/prioritize accordingly."
+      options:
+        - `Sev1`: This defect indicates a complete shutdown of the service or component; nothing can proceed.
+        - `Sev2`: It is a highly severe defect service, or the component has a severe functional impact. However, certain parts of the system remain operational.
+        - `Sev3`: It causes some undesirable behavior, but the system is still functional.
+        - `Sev4`: It won’t cause any major system breakdown.
+    validations:
+      required: true
   - type: textarea
     id: steps
     attributes:
